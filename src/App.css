@@ -92,12 +92,10 @@
   .summary{
     display: flex;
     flex-direction: column;
-    /* padding-top: px; */
     align-items: center;
     justify-content: center;
     justify-self: center;
     padding: 0;
-    /* position: fixed; */
 
   }
 
