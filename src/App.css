@@ -16,6 +16,8 @@
   margin-left: 50%;
 }
 
+
+
 @media (prefers-reduced-motion: no-preference) {
   .App-logo {
     animation: App-logo-spin infinite 20s linear;
@@ -75,13 +77,10 @@
 
 @media (max-width: 768px) {
   .col-auto {
-    /* display: flex; */
     flex-direction: column;
     height: auto;
     width: auto;
     align-items: center;
-    /* margin-top: 20px; */
-    /* margin-bottom: 50px; */
   }
   
   .col-auto > button{
@@ -95,8 +94,12 @@
     align-items: center;
     justify-content: center;
     justify-self: center;
-    padding: 0;
+    padding: 20px 0 ;
 
+  }
+
+  .mb-1 > textarea{
+    height: 65px;
   }
 
 }

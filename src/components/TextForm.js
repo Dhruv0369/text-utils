@@ -74,7 +74,7 @@ function TextForm(props) {
                 <button type="button" onClick={handleCapitalizeClick} className="btn btn-secondary btn-sm mx-2 mt-2 ">Capitalized case</button>
                 <button type="button" onClick={handleRemoveExtraClick} className="btn btn-primary btn-sm mx-2 mt-2 ">Remove Extra Spaces</button>
                 <button type="button" onClick={handleCopyText} className="btn btn-secondary btn-sm mx-2 mt-2 ">Copy Text</button>
-                <button type="button" onClick={handleClearClick} className="btn btn-danger btn-sm mx-2 mt-2 mb-2">Clear</button>
+                <button type="button" onClick={handleClearClick} className="btn btn-danger btn-sm mx-2 mt-2 ">Clear</button>
             </div>
             <div className="summary container my-1">
                 <h3>Your Text Summary</h3>
