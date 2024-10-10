@@ -7,7 +7,7 @@ export default function Navbar() {
         <>
             <nav>
                 <div className='navi'>
-                    <a href="/"><b>CONVERT TEXT</b></a>
+                    <a href="/" ><b>CONVERT TEXT</b></a>
                 </div>
             </nav>
         </>

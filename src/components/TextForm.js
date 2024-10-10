@@ -1,4 +1,6 @@
 import React, { useState } from 'react'
+import { IoCopyOutline } from "react-icons/io5";
+import { MdOutlineBackspace } from "react-icons/md";
 import '../App.css'
 
 function TextForm(props) {
@@ -64,21 +66,24 @@ function TextForm(props) {
     return (
         <>
             <div className="mb-1 mt-2">
-                <label htmlFor="exampleFormControlTextarea1" className="form-label"><b>Enter The Text</b></label>
+                <label htmlFor="exampleFormControlTextarea1" className="form-label"><b className='WordCount'>Enter The Text</b></label>
                 <textarea placeholder="Enter Your Text" className="form-control" value={text} onChange={handleOnChange} id="exampleFormControlTextarea1" rows="3"></textarea>
             </div>
             <div className="col-auto">
-                <button type="button" onClick={handleUpClick} className="btn btn-primary btn-sm mx-2 mt-2 ">Upper case</button>
-                <button type="button" onClick={handleLoClick} className="btn btn-secondary btn-sm mx-2 mt-2 ">Lower case</button>
-                <button type="button" onClick={handleSentenceClick} className="btn btn-primary btn-sm mx-2 mt-2 ">Sentence case</button>
-                <button type="button" onClick={handleCapitalizeClick} className="btn btn-secondary btn-sm mx-2 mt-2 ">Capitalized case</button>
-                <button type="button" onClick={handleRemoveExtraClick} className="btn btn-primary btn-sm mx-2 mt-2 ">Remove Extra Spaces</button>
-                <button type="button" onClick={handleCopyText} className="btn btn-secondary btn-sm mx-2 mt-2 ">Copy Text</button>
-                <button type="button" onClick={handleClearClick} className="btn btn-danger btn-sm mx-2 mt-2 ">Clear</button>
+                <button type="button" onClick={handleUpClick} className="btn mx-1 mt-2 ">Upper case</button>
+                <button type="button" onClick={handleLoClick} className="btn mx-1 mt-2 ">Lower case</button>
+                <button type="button" onClick={handleSentenceClick} className="btn mx-1 mt-2 ">Sentence case</button>
+                <button type="button" onClick={handleCapitalizeClick} className="btn mx-1 mt-2 ">Capitalized case</button>
+                <button type="button" onClick={handleRemoveExtraClick} className="btn  mx-1 mt-2 ">Remove Extra Spaces</button>
+
+                <div className="last-two-btns mt-2">
+                    <button type="button" onClick={handleCopyText} className="btn mx-1 icon"><IoCopyOutline /></button>
+                    <button type="button" onClick={handleClearClick} className="btn mx-1 icon RED"><MdOutlineBackspace /></button>
+                </div>
             </div>
             <div className="summary container my-1">
                 <h3>Your Text Summary</h3>
-                <p><b>{countWords(text)}</b> words and <b>{text.length}</b> characters</p>
+                <p><b className='WordCount'>{countWords(text)}</b> words and <b className='WordCount'>{text.length}</b> characters</p>
             </div>
         </>
     )

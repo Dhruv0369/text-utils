@@ -16,14 +16,6 @@
   margin-left: 50%;
 }
 
-
-
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
-}
-
 .App-header {
   background-color: #282c34;
   min-height: 100vh;
@@ -75,6 +67,68 @@
   text-align: center;
 }
 
+.btn {
+  --color: #00A97F;
+  --color2: rgb(10, 25, 30);
+  --color3: #a92a00;
+  padding: 0.4em 0.6em;
+  background-color: transparent;
+  border-radius: 6px;
+  justify-content: center;
+  align-items: center;
+  border: .3px solid var(--color);
+  transition: .5s;
+  position: relative;
+  overflow: hidden;
+  cursor: pointer;
+  z-index: 1;
+  font-weight: 300;
+  font-size: 17px;
+  font-family: 'Roboto', 'Segoe UI', sans-serif;
+  text-transform: uppercase;
+  color: var(--color);
+ }
+ 
+ .btn::after, .btn::before {
+  content: '';
+  display: block;
+  height: 100%;
+  width: 100%;
+  transform: skew(90deg) translate(-50%, -50%);
+  position: absolute;
+  inset: 50%;
+  left: 25%;
+  z-index: -1;
+  transition: .5s ease-out;
+  background-color: var(--color);
+ }
+ 
+ .btn::before {
+  top: -50%;
+  left: -25%;
+  transform: skew(90deg) rotate(180deg) translate(-50%, -50%);
+ }
+ 
+ .btn:hover::before {
+  transform: skew(45deg) rotate(180deg) translate(-50%, -50%);
+ }
+ 
+ .btn:hover::after {
+  transform: skew(45deg) translate(-50%, -50%);
+ }
+ 
+ .btn:hover {
+  color: var(--color2);
+ }
+ 
+ .btn:active {
+  filter: brightness(.7);
+  transform: scale(.98);
+ }
+ .WordCount{
+  color: #00A97F;
+ }
+
 @media (max-width: 768px) {
   .col-auto {
     flex-direction: column;
@@ -101,14 +155,79 @@
   .mb-1 > textarea{
     height: 65px;
   }
+  .last-two-btns {
+    display: flex; /* Flexbox se ek line mein dikhane ke liye */
+    justify-content: space-between; /* Thoda space dene ke liye */
+    flex-wrap: nowrap; /* Wrap hone se rokne ke liye */
+  }
+
+  .last-two-btns .btn {
+    font-size: 19px; /* Buttons ka text chhota kar diya */
+    padding: 5px 33px; /* Padding adjust ki mobile ke liye */
+  }
+
+  .icon { /* Icons ke size adjust karne ke liye */
+    font-size: 18px;
+  }
+  .btn {
+    --color: #00A97F;
+    --color2: rgb(10, 25, 30);
+    --color3: #a92a00;
+    padding: 0.4em 0.6em;
+    background-color: transparent;
+    border-radius: 6px;
+    justify-content: center;
+    align-items: center;
+    border: .3px solid var(--color);
+    transition: .5s;
+    position: relative;
+    overflow: hidden;
+    cursor: pointer;
+    z-index: 1;
+    font-weight: 300;
+    font-size: 14px;
+    font-family: 'Roboto', 'Segoe UI', sans-serif;
+    text-transform: uppercase;
+    color: var(--color);
+   }
+   
+   .btn::after, .btn::before {
+    content: '';
+    display: block;
+    height: 100%;
+    width: 100%;
+    transform: skew(90deg) translate(-50%, -50%);
+    position: absolute;
+    inset: 50%;
+    left: 25%;
+    z-index: -1;
+    transition: .5s ease-out;
+    background-color: var(--color);
+   }
+   
+   .btn::before {
+    top: -50%;
+    left: -25%;
+    transform: skew(90deg) rotate(180deg) translate(-50%, -50%);
+   }
+   
+   .btn:hover::before {
+    transform: skew(45deg) rotate(180deg) translate(-50%, -50%);
+   }
+   
+   .btn:hover::after {
+    transform: skew(45deg) translate(-50%, -50%);
+   }
+   
+   .btn:hover {
+    color: var(--color2);
+   }
+   
+   .btn:active {
+    filter: brightness(.7);
+    transform: scale(.98);
+   }
 
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
-}
+/* From Uiverse.io by nikk7007 */ 
